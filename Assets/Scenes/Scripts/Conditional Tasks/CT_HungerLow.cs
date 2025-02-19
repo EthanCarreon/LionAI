@@ -29,6 +29,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
 			if (hunger.value <= 0)
 			{
+				hunger.value = 0;
                 return true;
             }
 			else

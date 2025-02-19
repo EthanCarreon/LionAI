@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 192988953}
   - component: {fileID: 192988952}
   - component: {fileID: 192988951}
+  - component: {fileID: 192988958}
   m_Layer: 0
   m_Name: Lion
   m_TagString: Untagged
@@ -184,19 +185,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"hunger":{"_value":100.0,"_name":"hunger","_id":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _serializedBlackboard: '{"_variables":{"hunger":{"_value":2.0,"_name":"hunger","_id":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SleepingIcon":{"_value":1,"_name":"SleepingIcon","_id":"0bf5b20b-e3b9-4463-923f-3d7d80657c56","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"IdleIcon":{"_value":2,"_name":"IdleIcon","_id":"f378955e-1730-4e6a-8575-d25e685c672d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"huntIcon":{"_value":3,"_name":"huntIcon","_id":"a359ed93-ff75-4b98-8eaf-c4acc103c133","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"attackIcon":{"_value":4,"_name":"attackIcon","_id":"67f2421f-54ca-4ffc-b03f-3fd9484e23de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Sub
-    FSM":{"_value":3,"_name":"Sub FSM","_id":"4bad4561-b22e-48f2-a9cd-273ced9b46c6","$type":"NodeCanvas.Framework.Variable`1[[NodeCanvas.StateMachines.FSM,
-    NodeCanvas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    FSM":{"_value":5,"_name":"Sub FSM","_id":"4bad4561-b22e-48f2-a9cd-273ced9b46c6","$type":"NodeCanvas.Framework.Variable`1[[NodeCanvas.StateMachines.FSM,
+    NodeCanvas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"defenseTimer":{"_name":"defenseTimer","_id":"e1b871b1-cdec-4090-bdcd-35865d5439dc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"eatTimer":{"_name":"eatTimer","_id":"0a0a82f4-d7ad-43af-a693-62fc9a94fec7","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"readyToAttack":{"_name":"readyToAttack","_id":"e1ff9f41-6833-4027-ab2f-776b24b01cb0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"targetPosition":{"_name":"targetPosition","_id":"6d8a1c6c-f313-474f-8d06-eb385ebd414f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"startingPosition":{"_name":"startingPosition","_id":"3d804a15-3b21-462e-bae6-5c68f80cb69d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"hasArrived":{"_name":"hasArrived","_id":"5a4a4bc8-7961-45cf-a4db-82e4294e0d7d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"enemyPosition":{"_value":6,"_name":"enemyPosition","_id":"7745ef73-1b22-49df-b85f-cc7ea7b7c87d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"enemyHealth":{"_name":"enemyHealth","_id":"3f964e05-23ec-4a7e-b548-b16bac2f1993","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"prey":{"_value":7,"_name":"prey","_id":"ebe0a862-1ac6-4cfe-8193-81c9ba8bf319","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 508261875}
   - {fileID: 1529835655}
+  - {fileID: 2112103744}
+  - {fileID: 436579968}
   - {fileID: 11400000, guid: 9bdf86404600a414680644c3cf0287ce, type: 2}
+  - {fileID: 396420002}
+  - {fileID: 396419998}
   _serializedVariables:
-  - _json: '{"_value":100.0,"_name":"hunger","_id":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":2.0,"_name":"hunger","_id":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"SleepingIcon","_id":"0bf5b20b-e3b9-4463-923f-3d7d80657c56","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
@@ -209,11 +225,52 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1529835655}
+  - _json: '{"_value":1,"_name":"huntIcon","_id":"a359ed93-ff75-4b98-8eaf-c4acc103c133","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 2112103744}
+  - _json: '{"_value":1,"_name":"attackIcon","_id":"67f2421f-54ca-4ffc-b03f-3fd9484e23de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 436579968}
   - _json: '{"_value":1,"_name":"Sub FSM","_id":"4bad4561-b22e-48f2-a9cd-273ced9b46c6","$type":"NodeCanvas.Framework.Variable`1[[NodeCanvas.StateMachines.FSM,
       NodeCanvas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references:
     - {fileID: 0}
     - {fileID: 11400000, guid: 9bdf86404600a414680644c3cf0287ce, type: 2}
+  - _json: '{"_name":"defenseTimer","_id":"e1b871b1-cdec-4090-bdcd-35865d5439dc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"eatTimer","_id":"0a0a82f4-d7ad-43af-a693-62fc9a94fec7","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"readyToAttack","_id":"e1ff9f41-6833-4027-ab2f-776b24b01cb0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"targetPosition","_id":"6d8a1c6c-f313-474f-8d06-eb385ebd414f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"startingPosition","_id":"3d804a15-3b21-462e-bae6-5c68f80cb69d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"hasArrived","_id":"5a4a4bc8-7961-45cf-a4db-82e4294e0d7d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":1,"_name":"enemyPosition","_id":"7745ef73-1b22-49df-b85f-cc7ea7b7c87d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 396420002}
+  - _json: '{"_name":"enemyHealth","_id":"3f964e05-23ec-4a7e-b548-b16bac2f1993","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":1,"_name":"prey","_id":"ebe0a862-1ac6-4cfe-8193-81c9ba8bf319","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 396419998}
 --- !u!114 &192988953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,19 +285,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
   _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_name":"Sub
-    FSM","_targetVariableID":"4bad4561-b22e-48f2-a9cd-273ced9b46c6"},"_name":"SleepIdle","_position":{"x":277.2985,"y":225.3406},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_position":{"x":402.9122,"y":200.3962},"$type":"NodeCanvas.StateMachines.AnyState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"defenseIcon":1,"$type":"NodeCanvas.Tasks.Actions.AT_Defense"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Defense","_position":{"x":494.3018,"y":463.5748},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"attackIcon":2,"$type":"NodeCanvas.Tasks.Actions.AT_Attack"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Attack","_position":{"x":828.8665,"y":278.2154},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"hunger":{},"$type":"NodeCanvas.Tasks.Actions.AT_Eat"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eat","_position":{"x":696.3026,"y":92.9148},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.AT_Patrol"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Patrol","_position":{"x":964.4814,"y":635.8263},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"},{"_actionList":{"executionMode":1,"actions":[{"huntIcon":3,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"$type":"NodeCanvas.Tasks.Actions.AT_Hunt"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Hunt","_position":{"x":622.3903,"y":372.7832},"$type":"NodeCanvas.StateMachines.ActionState","$id":"6"}],"connections":[{"_condition":{"enemy":4,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"sleep":{"_name":"SleepingIcon","_targetVariableID":"0bf5b20b-e3b9-4463-923f-3d7d80657c56"},"enemyReach":4.0,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyClose"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"hunger":{"_name":"hunger","_targetVariableID":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b"},"$type":"NodeCanvas.Tasks.Conditions.CT_HungerLow"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"enemy":5,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyLeave"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeUntilAttack":10.0,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyDefenseWait"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CT_PatrolAfterDefense"},"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CT_WaitSleep"},"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CT_FoundPrey"},"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    FSM","_targetVariableID":"4bad4561-b22e-48f2-a9cd-273ced9b46c6"},"_name":"SleepIdle","_position":{"x":277.2985,"y":225.3406},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"huntIcon":1,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"targetPosition":{"_name":"targetPosition","_targetVariableID":"6d8a1c6c-f313-474f-8d06-eb385ebd414f"},"startingPosition":{"_name":"startingPosition","_targetVariableID":"3d804a15-3b21-462e-bae6-5c68f80cb69d"},"huntRadius":15.0,"$type":"NodeCanvas.Tasks.Actions.AT_Hunt"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Hunt","_position":{"x":602.8545,"y":355.4337},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"attackIcon":{"_name":"attackIcon","_targetVariableID":"67f2421f-54ca-4ffc-b03f-3fd9484e23de"},"huntIcon":{"_name":"huntIcon","_targetVariableID":"a359ed93-ff75-4b98-8eaf-c4acc103c133"},"readyToAttack":{"_name":"readyToAttack","_targetVariableID":"e1ff9f41-6833-4027-ab2f-776b24b01cb0"},"targetPosition":{"_name":"targetPosition","_targetVariableID":"6d8a1c6c-f313-474f-8d06-eb385ebd414f"},"enemyPosition":{"_name":"enemyPosition","_targetVariableID":"7745ef73-1b22-49df-b85f-cc7ea7b7c87d"},"$type":"NodeCanvas.Tasks.Actions.AT_Attack"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Attack","_position":{"x":778.3334,"y":264.3333},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"hunger":{"_name":"hunger","_targetVariableID":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b"},"attackIcon":{"_name":"attackIcon","_targetVariableID":"67f2421f-54ca-4ffc-b03f-3fd9484e23de"},"eatTimer":{"_name":"eatTimer","_targetVariableID":"0a0a82f4-d7ad-43af-a693-62fc9a94fec7"},"prey":{"_name":"prey","_targetVariableID":"ebe0a862-1ac6-4cfe-8193-81c9ba8bf319"},"defenseTimer":{"_name":"defenseTimer","_targetVariableID":"e1b871b1-cdec-4090-bdcd-35865d5439dc"},"$type":"NodeCanvas.Tasks.Actions.AT_Eat"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eat","_position":{"x":931.4402,"y":399.0035},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.AT_Patrol"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Patrol","_position":{"x":1091.053,"y":566.1235},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"defenseIcon":2,"$type":"NodeCanvas.Tasks.Actions.AT_Defense"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Defense","_position":{"x":478.0463,"y":457.3404},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"hasArrived":{"_name":"hasArrived","_targetVariableID":"5a4a4bc8-7961-45cf-a4db-82e4294e0d7d"},"target":{"_name":"targetPosition","_targetVariableID":"6d8a1c6c-f313-474f-8d06-eb385ebd414f"},"samplingRate":4.0,"detectionRadius":12.0,"$type":"NodeCanvas.Tasks.Actions.AT_Navigate"}]},"_position":{"x":1025.778,"y":206.3911},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"hunger":{"_name":"hunger","_targetVariableID":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b"},"$type":"NodeCanvas.Tasks.Conditions.CT_HungerLow"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"enemy":3,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"sleep":{"_name":"SleepingIcon","_targetVariableID":"0bf5b20b-e3b9-4463-923f-3d7d80657c56"},"hunt":{"_name":"huntIcon","_targetVariableID":"a359ed93-ff75-4b98-8eaf-c4acc103c133"},"enemyReach":4.0,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyClose"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"prey":3,"preyDist":4.0,"$type":"NodeCanvas.Tasks.Conditions.CT_FoundPrey"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"eatTimer":{"_name":"eatTimer","_targetVariableID":"0a0a82f4-d7ad-43af-a693-62fc9a94fec7"},"readyToAttack":{"_name":"readyToAttack","_targetVariableID":"e1ff9f41-6833-4027-ab2f-776b24b01cb0"},"maxTimeEat":5.0,"$type":"NodeCanvas.Tasks.Conditions.CT_EatTime"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CT_PatrolAfterDefense"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CT_WaitSleep"},"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"enemy":4,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyLeave"},"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"defenseTimer":{"_name":"defenseTimer","_targetVariableID":"e1b871b1-cdec-4090-bdcd-35865d5439dc"},"timeUntilAttack":4.0,"$type":"NodeCanvas.Tasks.Conditions.CT_EnemyDefenseWait"},"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
-  - {fileID: 1800603214}
-  - {fileID: 436579968}
   - {fileID: 2112103744}
+  - {fileID: 1800603214}
   - {fileID: 396420002}
   - {fileID: 396419998}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -271, y: -51}
+    _translation: {x: -688, y: -125}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -342,6 +398,28 @@ Transform:
   - {fileID: 681654504}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &192988958
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192988950}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &217051447
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &217051448
 Transform:
   m_ObjectHideFlags: 0
@@ -478,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 396419998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.77, y: 0.58, z: -5.22}
+  m_LocalPosition: {x: 9.69, y: 0.58, z: -4.45}
   m_LocalScale: {x: 0.61698, y: 0.61698, z: 0.61698}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1890,7 +1968,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 79816f35a979eb04c97d5280967c594f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1930,7 +2008,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.33, z: 0}
-  m_LocalScale: {x: 124.58061, y: 5.046335, z: 124.58061}
+  m_LocalScale: {x: 33.483833, y: 5.046335, z: 38.880993}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

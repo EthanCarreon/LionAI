@@ -1,22 +1,18 @@
+using System.Threading;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
-	public class CT_EnemyClose : ConditionTask {
+	public class CT_WaitTest : ConditionTask {
 
-		public Transform enemy;
-        public BBParameter<GameObject> idleIcon;
-        public BBParameter<GameObject> sleep;
-		public BBParameter<GameObject> hunt;
-        public float enemyReach;
-
+		public float timer;
+		public float maxTime;
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit(){
-            
-            return null;
+			return null;
 		}
 
 		//Called whenever the condition gets enabled.
@@ -32,17 +28,12 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
+			timer += Time.deltaTime;
 
-			float distance = Vector3.Distance(agent.transform.position, enemy.transform.position);
-
-			if (distance <= enemyReach)
+			if (timer >= maxTime)
 			{
-                idleIcon.value.SetActive(false);
-                sleep.value.SetActive(false);
-				hunt.value.SetActive(false);
-
-                return true;
-            }
+				return true;
+			}
 			else
 			{
 				return false;

@@ -6,11 +6,16 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class AT_Attack : ActionTask {
 
-		public GameObject attackIcon;
+		public BBParameter<GameObject> attackIcon;
+		public BBParameter<GameObject> huntIcon;
+        public BBParameter<bool> readyToAttack;
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        public BBParameter<Vector3> targetPosition;
+        public BBParameter<Transform> enemyPosition;
+
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
 			return null;
 		}
 
@@ -18,18 +23,22 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			attackIcon.SetActive(true);
-		}
+			readyToAttack.value = true;
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
-		}
+            attackIcon.value.SetActive(true);
+            huntIcon.value.SetActive(false);
+
+            targetPosition.value = enemyPosition.value.transform.position;
+
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
-			
-		}
+			attackIcon.value.SetActive(false);
+        }
 
 		//Called when the task is paused.
 		protected override void OnPause() {

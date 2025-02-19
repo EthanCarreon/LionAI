@@ -4,19 +4,15 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
-	public class CT_EnemyClose : ConditionTask {
+	public class CT_EatTime : ConditionTask {
 
-		public Transform enemy;
-        public BBParameter<GameObject> idleIcon;
-        public BBParameter<GameObject> sleep;
-		public BBParameter<GameObject> hunt;
-        public float enemyReach;
-
+		public BBParameter<float> eatTimer;
+		public BBParameter<bool> readyToAttack;
+		public float maxTimeEat;
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit(){
-            
-            return null;
+			return null;
 		}
 
 		//Called whenever the condition gets enabled.
@@ -33,14 +29,13 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
-			float distance = Vector3.Distance(agent.transform.position, enemy.transform.position);
-
-			if (distance <= enemyReach)
+			if (readyToAttack.value == true)
 			{
-                idleIcon.value.SetActive(false);
-                sleep.value.SetActive(false);
-				hunt.value.SetActive(false);
+                eatTimer.value += Time.deltaTime;
+            }
 
+			if (eatTimer.value >= maxTimeEat)
+			{
                 return true;
             }
 			else

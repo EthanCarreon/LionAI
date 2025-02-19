@@ -1,10 +1,13 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
 	public class CT_FoundPrey : ConditionTask {
+
+		public Transform prey;
+		public float preyDist;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -25,7 +28,17 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			return true;
+			float distanceToPrey = Vector3.Distance(agent.transform.position, prey.transform.position);
+
+            if (distanceToPrey <= preyDist)
+			{
+                return true;
+            }
+            else 
+			{
+				return false;
+            }
+            
 		}
 	}
 }

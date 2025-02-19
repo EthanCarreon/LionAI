@@ -6,7 +6,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class CT_EnemyDefenseWait : ConditionTask {
 
-		public float timer;
+		public BBParameter<float> defenseTimer;
 		public float timeUntilAttack;
 		protected override string OnInit(){
 			return null;
@@ -25,9 +25,9 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			timer += Time.deltaTime;
+			defenseTimer.value += Time.deltaTime;
 
-			if (timer >= timeUntilAttack)
+			if (defenseTimer.value >= timeUntilAttack)
 			{
                 return true;
             }
