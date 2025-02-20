@@ -1,6 +1,7 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace NodeCanvas.Tasks.Actions {
 
@@ -8,10 +9,9 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public BBParameter<GameObject> attackIcon;
 		public BBParameter<GameObject> huntIcon;
-        public BBParameter<bool> readyToAttack;
 
         public BBParameter<Vector3> targetPosition;
-        public BBParameter<Transform> enemyPosition;
+		public BBParameter<Transform> prey;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -23,7 +23,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			readyToAttack.value = true;
+			
         }
 
 		//Called once per frame while the action is active.
@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.Actions {
             attackIcon.value.SetActive(true);
             huntIcon.value.SetActive(false);
 
-            targetPosition.value = enemyPosition.value.transform.position;
+            targetPosition.value = prey.value.position;
 
         }
 
