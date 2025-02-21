@@ -1,6 +1,6 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
@@ -8,6 +8,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
         public BBParameter<float> hunger;
 		public BBParameter<float> maxHunger;
+		public BBParameter<GameObject> eatIcon;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -17,7 +18,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 		//Called whenever the condition gets enabled.
 		protected override void OnEnable() {
-			
+			eatIcon.value.SetActive(false);
 		}
 
 		//Called whenever the condition gets disabled.

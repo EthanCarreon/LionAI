@@ -31,6 +31,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+
+            // Coded in class with assist from Keely 
             timeSinceLastSample += Time.deltaTime;
             if (timeSinceLastSample > samplingRate)
             {

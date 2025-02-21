@@ -14,6 +14,8 @@ namespace NodeCanvas.Tasks.Conditions {
         public BBParameter<Transform> startingPosition;
         public BBParameter<Vector3> targetPosition;
 
+		public BBParameter<GameObject> patrolIcon;
+
         NavMeshAgent navAgent;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -30,6 +32,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
 		//Called whenever the condition gets disabled.
 		protected override void OnDisable() {
+
+			// move lion back to starting position
             targetPosition.value = startingPosition.value.transform.position;
 			navAgent.SetDestination(startingPosition.value.transform.position);
         }
@@ -37,11 +41,14 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
+
+			// add time and check if the time is greater than or equal to the max time, and if it is, then move to sleep (or back to idle subfsm)
 			timer += Time.deltaTime;
 
 			if (timer >= maxTimerSleep)
 			{
-				timer = 0;
+                patrolIcon.value.SetActive(false);
+                timer = 0;
                 return true;
             }
 			else

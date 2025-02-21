@@ -23,20 +23,24 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			
+
+			// disable and enable necessary icons
+            attackIcon.value.SetActive(true);
+            huntIcon.value.SetActive(false);
         }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-            attackIcon.value.SetActive(true);
-            huntIcon.value.SetActive(false);
-
+            
+			// move the lion towards the prey
             targetPosition.value = prey.value.position;
 
         }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
+
+			// when state is finished, attack icon disable
 			attackIcon.value.SetActive(false);
         }
 

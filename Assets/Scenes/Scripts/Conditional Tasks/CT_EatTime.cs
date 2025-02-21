@@ -13,6 +13,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
         public BBParameter<Vector3> targetPosition;
 		public BBParameter<Transform> prey;
+		public BBParameter<GameObject> eatIcon;
+		public BBParameter<GameObject> attackIcon;
 
 		public float distanceToPrey;
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -36,9 +38,11 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
 
 			float distance = Vector3.Distance(agent.transform.position, prey.value.transform.position);
-			Debug.Log(distance);
+			
 			if (distance <= distanceToPrey)
 			{
+				eatIcon.value.SetActive(true);
+				attackIcon.value.SetActive(false);
 				readyToAttack.value = true;
 			}
 
