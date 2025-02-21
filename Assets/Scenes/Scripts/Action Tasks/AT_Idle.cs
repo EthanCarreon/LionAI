@@ -10,6 +10,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public BBParameter<GameObject> idleIcon;
 		public BBParameter<float> hunger;
+
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -21,7 +22,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 			idleIcon.value.SetActive(true);
-		}
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {

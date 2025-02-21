@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
   m_Name: SleepIdle
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"maxWaitTime":5.0,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"hunger":{"_name":"hunger","_targetVariableID":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b"},"$type":"NodeCanvas.Tasks.Actions.AT_Idle"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":499.2817,"y":476.5733},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"sleep":{"_name":"SleepingIcon","_targetVariableID":"0bf5b20b-e3b9-4463-923f-3d7d80657c56"},"maxTimeSleep":5.0,"$type":"NodeCanvas.Tasks.Actions.AT_Sleep"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleep","_position":{"x":246.3333,"y":700.3334},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"maxWaitTime":5.0,"idleIcon":{"_name":"IdleIcon","_targetVariableID":"f378955e-1730-4e6a-8575-d25e685c672d"},"hunger":{"_name":"hunger","_targetVariableID":"9d9c5ffc-6678-45f4-bf0b-9d39197b309b"},"$type":"NodeCanvas.Tasks.Actions.AT_Idle"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":499.2817,"y":476.5733},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"sleep":{"_name":"SleepingIcon","_targetVariableID":"0bf5b20b-e3b9-4463-923f-3d7d80657c56"},"maxTimeSleep":5.0,"$type":"NodeCanvas.Tasks.Actions.AT_Sleep"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleep","_position":{"x":247.2431,"y":700.3333},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _objectReferences: []
   _graphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 308, y: -125}
-    _zoomFactor: 0.6534234
+    _translation: {x: 141.50203, y: -186.22618}
+    _zoomFactor: 0.7327193
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}

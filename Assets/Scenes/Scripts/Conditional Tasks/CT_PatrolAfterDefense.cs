@@ -9,9 +9,11 @@ namespace NodeCanvas.Tasks.Conditions {
 		public BBParameter<float> hunger;
 		public BBParameter<float> maxHunger;
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit(){
+        public BBParameter<bool> isHungry;
+
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit(){
 			return null;
 		}
 
@@ -30,6 +32,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
 			if (hunger.value >= maxHunger.value)
 			{
+                isHungry.value = false;
                 return true;
             }
 			else

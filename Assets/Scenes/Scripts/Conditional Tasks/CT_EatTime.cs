@@ -36,7 +36,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
 
 			float distance = Vector3.Distance(agent.transform.position, prey.value.transform.position);
-
+			Debug.Log(distance);
 			if (distance <= distanceToPrey)
 			{
 				readyToAttack.value = true;

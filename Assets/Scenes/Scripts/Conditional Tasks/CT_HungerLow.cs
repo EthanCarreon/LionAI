@@ -6,8 +6,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class CT_HungerLow : ConditionTask {
 
-
 		public BBParameter<float> hunger;
+		public BBParameter<bool> isHungry;
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit(){
@@ -30,6 +30,7 @@ namespace NodeCanvas.Tasks.Conditions {
 			if (hunger.value <= 0)
 			{
 				hunger.value = 0;
+				isHungry.value = true;
                 return true;
             }
 			else
